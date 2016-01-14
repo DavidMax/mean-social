@@ -1,9 +1,14 @@
 {
   "name": "mean-social",
   "version": "0.0.1",
+  "description": "A simple MEAN stack app to test out some ideas.",
+  "author": "David Max",
   "dependencies": {
-    "body-parser": "^1.14.2",
-    "express": "^4.13.3",
-    "mongoose": "^4.3.5"
+    "angular": "^1.4.x",
+    "angular-ui-router": "^0.2.x",
+    "body-parser": "^1.14.x",
+    "bootstrap": "^3.3.x",
+    "express": "^4.13.x",
+    "mongoose": "^4.3.x"
   }
 }
