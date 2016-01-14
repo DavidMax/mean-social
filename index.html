@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MEAN Social</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+<html lang="en" ng-app="MeanSocial">
+    <head>
+        <meta charset="UTF-8">
+        <title>MEAN Social</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="app/css/main.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div>
+                    <input type="text" ng-model="login.email">
+                    <input type="password" ng-model="login.password">
+                    <button>Login</button>
+                    <a ui-sref="signUp">Create An Account</a>
+                </div>
+            </div>
+        </nav>
+
+        <div ui-view class="main-view"></div>
+
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/signup/signup-controller.js"></script>
+    </body>
 </html>
