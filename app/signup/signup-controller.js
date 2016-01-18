@@ -1,17 +1,16 @@
 (function(){
-    angular.module('MeanSocial')
-        .controller('SignUpController', ['$scope', '$state', '$http', function($scope, $state, $http){
+    angular
+        .module('MeanSocial')
+        .controller('SignUpController', SignUpController);
 
-            $scope.createUser = function(){
+    SignUpController.$inject = ['$scope', '$state', 'SignUpService'];
 
-                $http.post('api/user/signup', $scope.newUser)
-                    .success(function(response){
-                        console.log(response);
-                    }).error(function(error){
-                        console.log(error);
-                    });
+    function SignUpController($scope, $state, SignUpService) {
 
-            };
+        $scope.createUser = function() {
+            SignUpService.createUser($scope.newUser);
+        };
 
-        }]);
+    }
+
 }());
